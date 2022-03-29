@@ -25,6 +25,12 @@ app.post("/", async (req, res) => {
   res.status(201).json(player);
 });
 
+app.get('/', async (req, res) => {
+  const data = await fs.readFile(dbLocation, 'utf8');
+  const players = JSON.parse(data)
+
+  res.status(200).json(players)
+})
 
 app.get("/health", (req, res) => {
   res.status(200).json({ message: "Success" });

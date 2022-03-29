@@ -32,6 +32,22 @@ app.get('/', async (req, res) => {
   res.status(200).json(players)
 })
 
+app.get('/:id', async (req, res) => {
+  const id = req.params.id
+
+  const data = await fs.readFile(dbLocation, 'utf8');
+  const players = JSON.parse(data)
+
+  const player = players.find(item => item.id === id)
+  console.log(player)
+
+  if (!player) {
+    return res.status(404).json({ message: "Player Not Found!" })
+  }
+
+  res.status(200).json(player)
+})
+
 app.get("/health", (req, res) => {
   res.status(200).json({ message: "Success" });
 });

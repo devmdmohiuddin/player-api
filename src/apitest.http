@@ -23,4 +23,31 @@ GET http://localhost:4000
 ###
 
 
-GET http://localhost:4000/NgHGOajF3
+PATCH http://localhost:4000/NgHGOajF3
+Content-Type: application/json
+
+{
+  "name": "Shofiullah"
+}
+
+
+### 
+
+
+
+PUT http://localhost:4000/NgHGOajF3
+Content-Type: application/json
+
+{
+  "name": "Shofi",
+    "country": "BD",
+    "rank": 3
+}
+
+
+###
+
+
+DELETE http://localhost:4000/NgHGOajF3
+
+

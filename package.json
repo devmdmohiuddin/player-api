@@ -1,0 +1,22 @@
+{
+  "name": "player_api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "server": "nodemon ./src/server.js"
+  },
+  "keywords": [],
+  "author": "Mohi",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "morgan": "^1.10.0",
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
